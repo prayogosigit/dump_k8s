@@ -41,4 +41,5 @@ INSTALL STEP BY STEP
 26. dpkg -i kubelet
 27. dpkg -i kubeadm
 28. dpkg -i kubectl
-29. 
+29. OPEN  PORT
+![image](https://user-images.githubusercontent.com/99325356/230304394-f84cec43-a83d-4c9e-aa6f-44e10f09a3d9.png)
