@@ -5,6 +5,8 @@ INSTALL STEP BY STEP
 1. 
 2. dpkg -i man-db
 3. touch /etc/modules-load.d/containerd.conf
+3. atau " printf "overlay\nbr_netfilter" > /etc/modules-load.d/containerd.conf "
+
 ```
 4. isi         overlay
                br_netfilter
