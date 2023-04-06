@@ -5,8 +5,9 @@ INSTALL STEP BY STEP
 1. 
 2. dpkg -i man-db
 3. touch /etc/modules-load.d/containerd.conf
-3. atau " printf "overlay\nbr_netfilter" > /etc/modules-load.d/containerd.conf "
-
+```
+5. atau " printf "overlay\nbr_netfilter" > /etc/modules-load.d/containerd.conf "
+```
 ```
 4. isi         overlay
                br_netfilter
@@ -14,8 +15,9 @@ INSTALL STEP BY STEP
 6. sudo modprobe overlay
 7. sudo modprobe br_netfilter
 8. touch /etc/sysctl.d/99-kubernetes-cri.conf
+```
 atau " printf "net.bridge.bridge-nf-call-iptables = 1\nnet.ipv4.ip_forward = 1\nnet.bridge.bridge-nf-call-ip6tables = 1" > /etc/sysctl.d/99-kubernetes-cri.conf
-
+```
 ```
 9. isi        net.bridge.bridge-nf-call-iptables = 1
               net.ipv4.ip_forward = 1
@@ -33,7 +35,9 @@ atau " printf "net.bridge.bridge-nf-call-iptables = 1\nnet.ipv4.ip_forward = 1\n
 17. sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 18. install apt transport
 19. touch /etc/apt/sources.list.d/kubernetes.list
+```
 atau printf "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+```
 ```
 19. isi          deb https://apt.kubernetes.io/ kubernetes-xenial main
 ```
