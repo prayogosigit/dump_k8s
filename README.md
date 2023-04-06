@@ -41,5 +41,9 @@ INSTALL STEP BY STEP
 26. dpkg -i kubelet
 27. dpkg -i kubeadm
 28. dpkg -i kubectl
-29. OPEN  PORT
+29. sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+30. mkdir .kube mode 755
+31. sudo cat /etc/kubernetes/admin.conf | sudo tee /home/azureuser/.kube/config
+32. kubectl apply -f flannel.yaml
+30. OPEN  PORT
 ![image](https://user-images.githubusercontent.com/99325356/230304394-f84cec43-a83d-4c9e-aa6f-44e10f09a3d9.png)
