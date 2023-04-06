@@ -12,11 +12,11 @@ INSTALL STEP BY STEP
 6. sudo modprobe overlay
 7. sudo modprobe br_netfilter
 8. touch /etc/sysctl.d/99-kubernetes-cri.conf
-
+```
 9. isi        net.bridge.bridge-nf-call-iptables = 1
               net.ipv4.ip_forward = 1
               net.bridge.bridge-nf-call-ip6tables = 1
-
+```
 11. sudo sysctl --system
 12. sudo apt-get update && sudo apt-get install -y containerd
 13. sudo mkdir -p /etc/containerd
@@ -29,9 +29,9 @@ INSTALL STEP BY STEP
 17. sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 18. install apt transport
 19. touch /etc/apt/sources.list.d/kubernetes.list
-
+```
 19. isi          deb https://apt.kubernetes.io/ kubernetes-xenial main
-
+```
 20. sudo apt update
 21. dpkg -i cri-tools
 22. dpkg -i kubernetes_cni
