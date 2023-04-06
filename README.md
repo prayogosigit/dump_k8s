@@ -5,10 +5,10 @@ INSTALL STEP BY STEP
 1. 
 2. dpkg -i man-db
 3. touch /etc/modules-load.d/containerd.conf
-
+```
 4. isi         overlay
                br_netfilter
-
+```
 6. sudo modprobe overlay
 7. sudo modprobe br_netfilter
 8. touch /etc/sysctl.d/99-kubernetes-cri.conf
