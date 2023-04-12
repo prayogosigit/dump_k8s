@@ -32,7 +32,7 @@ atau sudo printf "net.bridge.bridge-nf-call-iptables = 1\nnet.ipv4.ip_forward = 
 14. search dalam config.toml ganti "systemdCgroup = true"
 atau
 ```
-cd /etc/containerd/ && sudo sed -i '67s/false/true/g' /etc/containerd/config.toml
+cd /etc/containerd/ && sudo sed -i '125s/false/true/g' /etc/containerd/config.toml
 ```
 15. sudo systemctl restart containerd
 16. sudo swapoff -a
